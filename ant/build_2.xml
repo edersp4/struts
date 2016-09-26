@@ -1,0 +1,34 @@
+<project name="Lazuw Web 2" default="clean-install" basedir="./../">
+	
+	<property name="maven-path" value="C:\desenvolvimento\apache-maven-3.3.9\bin"></property>
+	<property name="skip.test" value="-Dmaven.test.skip=true"/>
+
+	<condition property="mvn.exec" value="${maven-path}\mvn.cmd" else="mvn">
+		<os family="windows"/>
+	</condition>
+
+	
+	<target name="clean-install">
+		<exec executable="${mvn.exec}" failonerror="true" dir="./">
+			<arg value="clean" />
+			<arg value="install" />
+			<arg value="${skip.test}" />
+		</exec>
+	</target>	
+	
+	<!-- gera os arquivos referentes ao eclipse (.project, .classpath, ...) -->
+	<target name="eclipse">
+		<exec executable="${mvn.exec}" failonerror="true" dir="./">
+			<arg value="eclipse:clean" />
+			<arg value="eclipse:eclipse" />
+			<arg value="-Dwtpversion=2.0" />
+		</exec>
+	</target>
+	
+	<target name="tomcat-run">
+			<exec executable="${mvn.exec}" failonerror="true" dir="./">
+				<arg value="tomcat6:deploy" />
+			</exec>
+	</target>
+	
+</project>
