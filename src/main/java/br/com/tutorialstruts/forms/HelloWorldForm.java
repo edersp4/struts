@@ -3,23 +3,14 @@ package br.com.tutorialstruts.forms;
 import org.apache.struts.action.ActionForm;
 
 public class HelloWorldForm extends ActionForm {
-	private String login;
-	private String senha;
+	String message;
 
-	public String getLogin() {
-		return login;
+	public String getMessage() {
+		return message;
 	}
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }
