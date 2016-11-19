@@ -44,18 +44,18 @@
 				<configuration>
 					<verbose>true</verbose>
 					<fork>true</fork>
-					<executable>C:\Program Files\Java\jdk1.7.0_71\bin\javac</executable>
-					<compilerVersion>1.7</compilerVersion>
+					<executable>/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/bin/javac</executable>
+					<compilerVersion>1.8</compilerVersion>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat6-maven-plugin</artifactId>
+				<artifactId>tomcat9-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
 					<url>http://localhost:8080/manager</url>
 					<server>TomcatServer</server>
-					<path>/tutorialstruts</path>
+					<path>/struts</path>
 					<contextReloadable>true</contextReloadable>
 				</configuration>
 			</plugin>

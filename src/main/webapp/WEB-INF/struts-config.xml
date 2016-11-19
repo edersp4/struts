@@ -8,7 +8,7 @@
 	</form-beans>
 	<action-mappings>
 		<action path="/helloWorld" type="br.com.tutorialstruts.action.HelloWorldAction" name="helloWorldForm">
-			<forward name="sucess" path="sucess.jsp"></forward>
+			<forward name="success" path="/HelloWorld.jsp"/>
 		</action>
 	
 	</action-mappings>
